@@ -12,3 +12,9 @@ const createUser = () => {
   }
 };
 formElem.addEventListener('input', createUser);
+
+const onFormSubmit = (event) => {
+  event.preventDefault();
+  const formData = [...new FormData(formElem)];
+  alert(JSON.stringify(formData));
+};
