@@ -15,6 +15,9 @@ formElem.addEventListener('input', createUser);
 
 const onFormSubmit = (event) => {
   event.preventDefault();
-  const formData = [...new FormData(formElem)];
+  const formData = [...new FormData(formElem)].reduce(
+    (acc, [field, value]) => ({ ...acc, [field]: value }),
+    {}
+  );
   alert(JSON.stringify(formData));
 };
