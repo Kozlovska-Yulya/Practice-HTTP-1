@@ -4,7 +4,8 @@ const formElem = document.querySelector('.login-form');
 const btnElem = document.querySelector('.submit-button');
 
 const createUser = () => {
-  if (formElem.reportVality()) {
+  const isValidForm = formElem.reportValidity();
+  if (isValidForm) {
     btnElem.removeAttribute('disabled');
   } else {
     btnElem.setAttribute('disabled', true);
