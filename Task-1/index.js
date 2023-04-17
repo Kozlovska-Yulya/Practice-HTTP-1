@@ -20,6 +20,11 @@ const onFormSubmit = (event) => {
     {}
   );
   alert(JSON.stringify(formData));
+  formElem.reset('');
 };
 
 btnElem.addEventListener('click', onFormSubmit);
+
+const sendToServer = () => {
+  return fetch(baseURL).then((response) => response.json());
+};
