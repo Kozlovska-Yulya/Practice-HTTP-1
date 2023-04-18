@@ -24,12 +24,10 @@ const onFormSubmit = (event) => {
     headers: { 'Content-Type': 'application/json;charset=utf-8' },
     body: JSON.stringify(formData),
   })
-    .then((response) => {
-      response.json();
-      formElem.reset('');
-    })
-    .then((formData) => {
-      alert(formData);
+    .then((response) => response.json())
+    .then((data) => {
+      alert(JSON.stringify(data));
+      formElem.reset();
     });
 };
 
