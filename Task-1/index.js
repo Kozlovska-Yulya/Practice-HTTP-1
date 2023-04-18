@@ -24,7 +24,7 @@ const onFormSubmit = (event) => {
     headers: { 'Content-Type': 'application/json;charset=utf-8' },
     body: JSON.stringify(formData),
   }).then((response) => {
-    alert(JSON.stringify(response));
+    alert(response.json());
     formElem.reset('');
   });
 };
