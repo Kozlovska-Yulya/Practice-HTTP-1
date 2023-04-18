@@ -21,11 +21,7 @@ const onFormSubmit = (event) => {
   );
   alert(JSON.stringify(formData));
   formElem.reset('');
-};
 
-btnElem.addEventListener('click', onFormSubmit);
-
-const sendFormData = () => {
   return fetch(baseURL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json;charset=utf-8' },
@@ -33,4 +29,4 @@ const sendFormData = () => {
   });
 };
 
-btnElem.addEventListener('submit', sendFormData);
+btnElem.addEventListener('click', onFormSubmit);
