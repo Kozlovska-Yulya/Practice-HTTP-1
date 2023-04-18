@@ -1,4 +1,4 @@
-const baseURL = 'https://643b033f4477945573532046.mockapi.io/api/v1/user';
+const baseURL = 'https://643b033f4477945573532046.mockapi.io/api/v1/users';
 
 const formElem = document.querySelector('.login-form');
 const btnElem = document.querySelector('.submit-button');
@@ -23,9 +23,10 @@ const onFormSubmit = (event) => {
     method: 'POST',
     headers: { 'Content-Type': 'application/json;charset=utf-8' },
     body: JSON.stringify(formData),
-  }).then((response) => {
-    alert(JSON.stringify(response));
-    formElem.innerHTML = '';
+    // .then((response) => {
+    //   alert(JSON.stringify(response));
+    // formElem.innerHTML = '';
+    // })
   });
 };
 
