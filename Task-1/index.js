@@ -27,8 +27,10 @@ btnElem.addEventListener('click', onFormSubmit);
 
 const sendFormData = () => {
   return fetch(baseURL, {
-    method: 'PUT',
+    method: 'POST',
     headers: { 'Content-Type': 'application/json;charset=utf-8' },
     body: JSON.stringify(formData),
   });
 };
+
+btnElem.addEventListener('submit', sendFormData);
