@@ -22,11 +22,11 @@ const onFormSubmit = (event) => {
   return fetch(baseURL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json;charset=utf-8' },
-    body: JSON.stringify(formData),
-    // .then((response) => {
-    //   alert(JSON.stringify(response));
-    // formElem.innerHTML = '';
-    // })
+    body: JSON.stringify(formData)
+    .then((response) => {
+      alert(JSON.stringify(response));
+      formElem.reset('');
+    }),
   });
 };
 
