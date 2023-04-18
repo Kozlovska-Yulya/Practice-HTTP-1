@@ -22,10 +22,11 @@ const onFormSubmit = (event) => {
   return fetch(baseURL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json;charset=utf-8' },
-    body: alert(JSON.stringify(formData)),
+    body: JSON.stringify(formData),
+  }).then((response) => {
+    alert(JSON.stringify(response));
+    formElem.innerHTML = '';
   });
-  // alert(JSON.stringify(formData));
-  // formElem.reset('');
 };
 
 btnElem.addEventListener('click', onFormSubmit);
