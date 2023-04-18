@@ -19,14 +19,13 @@ const onFormSubmit = (event) => {
     (acc, [field, value]) => ({ ...acc, [field]: value }),
     {}
   );
-  alert(JSON.stringify(formData));
-  formElem.reset('');
-
   return fetch(baseURL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json;charset=utf-8' },
     body: JSON.stringify(formData),
   });
+  // alert(JSON.stringify(formData));
+  // formElem.reset('');
 };
 
 btnElem.addEventListener('click', onFormSubmit);
