@@ -23,10 +23,14 @@ const onFormSubmit = (event) => {
     method: 'POST',
     headers: { 'Content-Type': 'application/json;charset=utf-8' },
     body: JSON.stringify(formData),
-  }).then((response) => {
-    alert(response.json());
-    formElem.reset('');
-  });
+  })
+    .then((response) => {
+      response.json();
+      formElem.reset('');
+    })
+    .then((formData) => {
+      alert(formData);
+    });
 };
 
 btnElem.addEventListener('click', onFormSubmit);
