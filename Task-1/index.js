@@ -22,7 +22,7 @@ const onFormSubmit = (event) => {
   return fetch(baseURL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json;charset=utf-8' },
-    body: JSON.stringify(formData),
+    body: alert(JSON.stringify(formData)),
   });
   // alert(JSON.stringify(formData));
   // formElem.reset('');
